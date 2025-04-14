@@ -15,3 +15,6 @@ const client = bedrock.createClient({
 * const fac = `/warp test 你的設施頻道訊息`
 * const trad = `/warp test 你的交易頻道訊息`
 * const lot = `/warp test 你的抽獎頻道訊息`
+
+# Discord Self-BOT
+* dc.login('你的Discord Token'); 設定你的DC帳號客戶端token
