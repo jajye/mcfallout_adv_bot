@@ -90,3 +90,17 @@ client.once('spawn', () => {
         SendMsg(client, `%${lot}`);
     }, 1000 * 60 * 10 + 500)
 })
+
+client.on('kick', p => { console.log(`【被伺服器踢除】`); process.exit(1) })
+client.on('close', p => { console.log(`【伺服器斷開連接】`); process.exit(1) })
+client.on('error', p => {
+    switch (true) {
+        case p.toString().indexOf(`UNAUTHORIZED`) > -1:
+            console.log(`【微軟官方】授權伺服器驗證失敗，系統重啟`);
+            process.exit(1);
+        case p.toString().indexOf(`The request is blocked.`) > -1:
+        case p.toString().indexOf(`429 Too Many Requests`) > -1:
+            console.error(`【發生錯誤】系統重啟`);
+            process.exit(1);
+    }
+})
