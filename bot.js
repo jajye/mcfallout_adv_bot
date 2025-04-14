@@ -17,7 +17,7 @@ dc.on('ready', async () => {
     console.log(`${dc.user.username} is ready!`);
 
 
-    const guild = client.guilds.cache.get(guildId);
+    const guild = dc.guilds.cache.get(guildId);
     if (!guild) return console.log('找不到伺服器');
 
 
