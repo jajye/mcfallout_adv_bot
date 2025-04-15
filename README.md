@@ -1,13 +1,14 @@
 # 廢土基岩登入API
 const client = bedrock.createClient({
-    host: 'jpb.mcfallout.net',   // optional
-    port: 19132,         // optional, default 19132
-    username: '你的MCID',   // the username you want to join as, optional if online mode
-    offline: true       // optional, default false. if true, do not login with Xbox Live. You will not be asked to sign-in if set to true.
+    host: 'jpb.mcfallout.net',
+    port: 19132,
+    username: '你的MCID',
+    offline: true
 })
 
 * host: 廢土基岩ip
 * username: 遊戲id
+* 首次登入需到微軟官網驗證
 
 
 # 設定廣告訊息
@@ -15,6 +16,7 @@ const client = bedrock.createClient({
 * const fac = `/warp test 你的設施頻道訊息`
 * const trad = `/warp test 你的交易頻道訊息`
 * const lot = `/warp test 你的抽獎頻道訊息`
+* 如果有加入色碼，必需購買階級
 
 # Discord Self-BOT
 * dc.login('你的Discord Token'); 設定你的DC帳號客戶端token
